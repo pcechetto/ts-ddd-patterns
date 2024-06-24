@@ -1,6 +1,6 @@
 import Address from "./address";
 
-class Customer {
+export default class Customer {
   private _id: string;
   private _name: string = "";
   private _address!: Address;
@@ -37,7 +37,11 @@ class Customer {
     this._active = false;
   }
 
-  setAddress(address: Address) {
+  set Address(address: Address) {
     this._address = address;
+  }
+
+  get Address(): Address {
+    return this._address;
   }
 }
