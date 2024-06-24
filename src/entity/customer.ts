@@ -12,18 +12,26 @@ export default class Customer {
     this.validate();
   }
 
+  get name() {
+    return this._name;
+  }
+
   validate() {
-    if (this._name.length === 0) {
-      throw new Error("name is required");
-    }
     if (this._id.length === 0) {
       throw new Error("id is required");
+    }
+    if (this._name.length === 0) {
+      throw new Error("name is required");
     }
   }
 
   changeName(name: string) {
     this._name = name;
     this.validate();
+  }
+
+  isActive(): boolean {
+    return this._active;
   }
 
   activate() {
