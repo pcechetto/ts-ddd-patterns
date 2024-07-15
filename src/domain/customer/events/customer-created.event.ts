@@ -1,5 +1,4 @@
-import Address from "../../entity/address";
-import EventInterface from "../shared/event.interface";
+import EventInterface from "../../shared/event.interface";
 
 export default class CustomerCreatedEvent implements EventInterface {
   dateTimeOcurred: Date;

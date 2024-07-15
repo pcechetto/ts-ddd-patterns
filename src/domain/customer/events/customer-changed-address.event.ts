@@ -1,5 +1,5 @@
-import Address from "../../entity/address";
-import EventInterface from "../shared/event.interface";
+import Address from "../../customer/value-object/address";
+import EventInterface from "../../shared/event.interface";
 
 export default class CustomerChangedAddressEvent implements EventInterface {
   dateTimeOcurred: Date;
